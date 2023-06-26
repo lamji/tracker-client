@@ -1,7 +1,7 @@
 /** @format */
 import { useState, useEffect } from "react";
 import Router from "next/router";
-import AppHelper from "../../app-helper";
+import AppHelper from "../../../app-helper";
 import Swal from "sweetalert2";
 
 export default function Model() {

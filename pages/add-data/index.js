@@ -16,12 +16,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import EditIcon from "@mui/icons-material/Edit";
 import Select from "@mui/material/Select";
-import Model from "./model";
 import Loading from "../../components/backdrop";
 import Variants from "../../components/skeleton";
 import Grid from "@mui/material/Grid";
 import TableDataGrid from "../../components/Table";
 import AccountMenu from "../../components/menu";
+import Model from "../../app/model/addPages/model";
 
 export default function Login() {
   const {

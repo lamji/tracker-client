@@ -1,15 +1,15 @@
 /** @format */
 
-import AppHelper from "../../app-helper";
+import AppHelper from "../../../app-helper";
 import Swal from "sweetalert2";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import ToString from "../../toString";
+import ToString from "../../../toString";
 import { useSelector, useDispatch } from "react-redux";
-import { ADD_DATA } from "../../app/features/data/dataSlice";
-import { getAll } from "../../app/api/getData";
-import { updateRecord } from "../../app/api/updateData";
-import { addRecord } from "../../app/api/postData";
+import { ADD_DATA } from "../../features/data/dataSlice";
+import { getAll } from "../../api/getData";
+import { updateRecord } from "../../api/updateData";
+import { addRecord } from "../../api/postData";
 
 function Model() {
   const router = useRouter();

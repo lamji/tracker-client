@@ -15,7 +15,7 @@ import {
   OutlinedInput,
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import Model from "./model";
+import Model from "../../app/model/register/model";
 
 export default function index() {
   const {
