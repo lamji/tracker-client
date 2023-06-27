@@ -226,7 +226,7 @@ export default function Login() {
         >
           <DialogTitle id="alert-dialog-title">{type}</DialogTitle>
           <DialogContent>
-            <Box sx={{ minWidth: 420 }}>
+            <Box>
               {category === "new" ? (
                 <TextField
                   fullWidth

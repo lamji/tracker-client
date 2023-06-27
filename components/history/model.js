@@ -101,7 +101,6 @@ function Model({ dataOut, filter }) {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log("data", data);
             Swal.fire("Deleted!", "Transaction has been deleted.", "success");
             setShow(false);
             setRefresh(!refresh);

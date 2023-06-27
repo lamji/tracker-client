@@ -156,7 +156,6 @@ function Model() {
         type: typeFilter || undefined,
       };
       const { data } = await getAll(params);
-      console.log("dataMe", data);
       setBalance(data.balance);
       setTotalIncome(data.income);
       setTotalExpenses(data.expenses);

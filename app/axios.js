@@ -15,11 +15,6 @@ const instance = axios.create({
 instance.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token"); // Retrieve the token from local storage
-    console.log(
-      "process.env.NEXT_PUBLIC_API_URL",
-      process.env.NEXT_PUBLIC_API_URL,
-      token
-    );
     if (token) {
       config.headers.Authorization = `Bearer ${token}`; // Add the token to the headers
     }

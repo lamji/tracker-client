@@ -5,23 +5,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import RegLogin from "../../components/reLogin/index";
 import { Box, Grid, Typography } from "@mui/material";
+import ViewModel from "../../app/layoutModel";
 
 export default function Login() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  //choose the screen size
-  const handleResize = () => {
-    if (window.innerWidth < 720) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  // create an event listener
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
+  const { isMobile } = ViewModel();
 
   return (
     <React.Fragment>

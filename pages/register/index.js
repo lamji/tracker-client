@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Form, Row, Col } from "react-bootstrap";
+import ViewModel from "../../app/layoutModel";
 
 import Link from "next/link";
 import {
@@ -18,8 +19,8 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import Model from "../../app/model/register/model";
 
 export default function index() {
+  const { isMobile } = ViewModel();
   const {
-    isMobile,
     setFirstName,
     setLastName,
     setEmail,
@@ -78,22 +79,30 @@ export default function index() {
             <Form>
               <h4 className="text-muted text-left mb-4">Register User</h4>
               <Row>
-                <Col xs={6} className="px-2">
+                <Col xs={12} className="px-2">
                   <TextField
                     id="outlined-basic"
                     label="First Name"
                     variant="outlined"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
+                    sx={{
+                      width: "100%",
+                      mb: 1,
+                    }}
                   />
                 </Col>
-                <Col xs={6} className="px-2">
+                <Col xs={12} className="px-2">
                   <TextField
                     id="outlined-basic"
                     label="Last Name"
                     variant="outlined"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
+                    sx={{
+                      width: "100%",
+                      mb: 1,
+                    }}
                   />
                 </Col>
                 <Col xs={12} className="px-2">
@@ -105,7 +114,7 @@ export default function index() {
                     onChange={(e) => setEmail(e.target.value)}
                     sx={{
                       width: "100%",
-                      my: 2,
+                      mb: 1,
                     }}
                   />
                 </Col>
@@ -182,7 +191,7 @@ export default function index() {
               Register
             </Button>
             <Link href="/login">
-              <p className="text-10 pointer" style={{ marginTop: "20px" }}>
+              <p className="pointer" style={{ marginTop: "20px" }}>
                 Already have an account? Login Here
               </p>
             </Link>
